@@ -125,16 +125,7 @@
       background: var(--spry-purple);
     }
 
-    /* Subtle radial glow over hero bg */
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(128, 85, 196, 0.45) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero-tag {
+.hero-tag {
       display: inline-flex;
       align-items: center;
       font-family: var(--sans);
@@ -254,19 +245,21 @@
 
     /* ── VIDEO ─────────────────────────────────────────── */
     #video {
-      background: var(--spry-navy);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: var(--cream);
+      border-top: none;
+      border-bottom: 1px solid var(--border);
     }
 
     .video-lead {
-      font-family: var(--sans);
-      font-size: clamp(18px, 2.2vw, 26px);
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.4vw, 30px);
       font-weight: 300;
-      color: rgba(255,255,255,0.82);
-      line-height: 1.6;
-      max-width: 640px;
-      margin-bottom: 48px;
+      color: var(--ink);
+      line-height: 1.5;
+      max-width: 680px;
+      margin: 0 auto 48px;
+      text-align: center;
+      letter-spacing: -0.015em;
     }
 
     .video-shell {
@@ -720,7 +713,7 @@
   <!-- 02 · VIDEO -->
   <section id="video">
     <div class="inner">
-      <h2 class="video-lead fade-up d1">A film about where physical therapy has been — and the question every clinician is sitting with right now: AI.</h2>
+      <h2 class="video-lead fade-up d1">A film about where physical therapy has been and the question every clinician is sitting with right now: AI.</h2>
       <div class="video-shell fade-up d2">
         <!-- ✏️  Replace VIDEO_ID with your actual YouTube video ID -->
         <iframe
@@ -785,7 +778,7 @@
         <span class="e-dash"></span>
         <span class="eyebrow">Find Us at OPTA</span>
       </div>
-      <h2 class="team-h2 fade-up d1">Come say hello.</h2>
+      <h2 class="team-h2 fade-up d1">Come say hello at OPTA.</h2>
       <p class="team-intro fade-up d2">Our team will be at the OPTA Spring Conference on April 10 &amp; 11 at the Hilton Polaris, Columbus. Stop by the booth — or book a conversation ahead of time.</p>
       <div class="team-grid">
 
