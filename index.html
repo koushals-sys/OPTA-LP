@@ -67,10 +67,11 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 52px;
-      background: rgba(245, 245, 238, 0.9);
+      background: rgba(62, 17, 80, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.3s;
     }
 
     .nav-logo {
@@ -89,7 +90,7 @@
       font-style: italic;
       font-size: 18px;
       font-weight: 300;
-      color: var(--ink-3);
+      color: rgba(255,255,255,0.4);
       line-height: 1;
     }
 
@@ -97,17 +98,17 @@
       display: inline-flex;
       align-items: center;
       padding: 9px 24px;
-      background: var(--spry-purple);
-      color: var(--cream);
+      background: var(--spry-green);
+      color: var(--spry-navy);
       border-radius: 100px;
       font-family: var(--sans);
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.04em;
       text-decoration: none;
       transition: opacity 0.2s, transform 0.2s;
     }
-    .nav-pill:hover { opacity: 0.78; transform: translateY(-1px); }
+    .nav-pill:hover { opacity: 0.85; transform: translateY(-1px); }
 
     /* ── HERO ──────────────────────────────────────────── */
     #hero {
@@ -120,7 +121,16 @@
       padding: 100px 52px 100px;
       position: relative;
       overflow: hidden;
-      background: var(--cream);
+      background: var(--spry-purple);
+    }
+
+    /* Subtle radial glow over hero bg */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(128, 85, 196, 0.45) 0%, transparent 65%);
+      pointer-events: none;
     }
 
     .hero-tag {
@@ -131,12 +141,14 @@
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--spry-mid);
-      border: 1px solid rgba(101, 33, 156, 0.22);
+      color: var(--spry-pale);
+      border: 1px solid rgba(222, 204, 236, 0.3);
       border-radius: 100px;
       padding: 6px 16px;
       margin-bottom: 36px;
-      background: rgba(101, 33, 156, 0.06);
+      background: rgba(222, 204, 236, 0.08);
+      position: relative;
+      z-index: 1;
     }
 
     .hero-h1 {
@@ -145,21 +157,25 @@
       font-weight: 500;
       line-height: 1.06;
       letter-spacing: -0.03em;
-      color: var(--ink);
+      color: #ffffff;
       margin-bottom: 48px;
       white-space: nowrap;
+      position: relative;
+      z-index: 1;
     }
     .hero-h1 em {
       font-style: italic;
       font-weight: 500;
-      color: var(--spry-light);
+      color: var(--spry-green);
     }
 
     .hero-rule {
       width: 48px;
       height: 1px;
-      background: var(--border-2);
+      background: rgba(255,255,255,0.2);
       margin: 0 auto 32px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-foot {
@@ -175,7 +191,7 @@
       font-style: italic;
       font-size: clamp(15px, 1.6vw, 19px);
       font-weight: 300;
-      color: var(--ink-2);
+      color: rgba(255,255,255,0.65);
       line-height: 1.65;
       max-width: 320px;
       text-align: left;
@@ -185,10 +201,12 @@
       font-family: var(--sans);
       font-size: 15px;
       font-weight: 300;
-      color: var(--ink-2);
+      color: rgba(255,255,255,0.7);
       line-height: 1.8;
       max-width: 480px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-scroll {
@@ -202,10 +220,10 @@
       font-size: 9.5px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--ink-3);
+      color: rgba(255,255,255,0.35);
       z-index: 2;
     }
-    .scroll-dash { width: 28px; height: 1px; background: var(--ink-3); }
+    .scroll-dash { width: 28px; height: 1px; background: rgba(255,255,255,0.35); }
 
     /* ── Shared section ────────────────────────────────── */
     section { padding: 112px 52px; }
@@ -235,18 +253,18 @@
 
     /* ── VIDEO ─────────────────────────────────────────── */
     #video {
-      background: var(--cream-2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--spry-navy);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .video-lead {
       font-family: var(--sans);
-      font-size: 15px;
+      font-size: clamp(18px, 2.2vw, 26px);
       font-weight: 300;
-      color: var(--ink-2);
-      line-height: 1.88;
-      max-width: 540px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+      max-width: 640px;
       margin-bottom: 48px;
     }
 
@@ -313,8 +331,8 @@
 
     /* ── ABOUT SPRY ────────────────────────────────────── */
     #about {
-      background: var(--cream-2);
-      border-top: 1px solid var(--border);
+      background: var(--spry-pale);
+      border-top: 1px solid rgba(62,17,80,0.1);
     }
 
     .about-grid {
@@ -416,8 +434,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
+      background: rgba(62,17,80,0.1);
+      border: 1px solid rgba(62,17,80,0.1);
       border-radius: 16px;
       overflow: hidden;
       margin-bottom: 52px;
@@ -432,14 +450,14 @@
       text-align: center;
       transition: background 0.22s;
     }
-    .card:hover { background: var(--cream-2); }
+    .card:hover { background: var(--spry-pale); }
 
     .avatar {
       width: 88px;
       height: 88px;
       border-radius: 50%;
-      background: var(--cream-2);
-      border: 1px solid var(--border-2);
+      background: var(--spry-pale);
+      border: 2px solid var(--spry-purple);
       margin-bottom: 24px;
       overflow: hidden;
       flex-shrink: 0;
@@ -465,7 +483,7 @@
       font-weight: 500;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--ink-2);
+      color: var(--spry-mid);
       margin-bottom: 16px;
     }
     .m-bio {
