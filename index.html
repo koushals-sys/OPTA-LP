@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPRY at OPTA 2026 — SPRYatOPTA.ai</title>
+  <title>SPRY at OPTA 2026 — SPRYatOPTA.com</title>
+  <link rel="icon" type="image/webp" href="spry_logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,200;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
@@ -191,11 +192,11 @@
 
     .hero-body {
       font-family: var(--sans);
-      font-size: 15px;
+      font-size: 24px;
       font-weight: 300;
       color: rgba(255,255,255,0.7);
-      line-height: 1.8;
-      max-width: 480px;
+      line-height: 1.6;
+      max-width: 640px;
       text-align: center;
       position: relative;
       z-index: 1;
@@ -314,7 +315,7 @@
 
     .editorial {
       font-family: var(--sans);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.92;
       color: var(--ink-2);
@@ -564,11 +565,13 @@
 
     .closing-meta {
       font-family: var(--sans);
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 300;
-      color: rgba(245,245,238,0.35);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      color: rgba(245,245,238,0.65);
+      letter-spacing: 0;
+      text-transform: none;
+      max-width: 520px;
+      line-height: 1.7;
       margin-bottom: 56px;
     }
 
@@ -671,15 +674,37 @@
 
     /* ── Responsive ────────────────────────────────────── */
     @media (max-width: 900px) {
-      nav          { padding: 16px 24px; }
+      /* Nav */
+      nav               { padding: 12px 20px; }
+      .nav-logo         { gap: 10px; }
+      .nav-logo img     { height: 18px; }
+      .nav-logo .sep    { font-size: 14px; }
+      .nav-pill         { padding: 7px 16px; font-size: 11px; }
+
+      /* Hero */
       section      { padding: 80px 24px; }
-      #hero        { padding: 0 24px 88px; }
+      #hero        { padding: 80px 24px 80px; min-height: 100svh; }
+      .hero-tag    { font-size: 9px; letter-spacing: 0.12em; padding: 5px 14px; margin-bottom: 24px; }
+      .hero-h1     { font-size: clamp(36px, 10vw, 64px); white-space: normal; margin-bottom: 28px; }
+      .hero-rule   { margin-bottom: 20px; }
+      .hero-body   { font-size: 17px; max-width: 100%; }
+      .hero-scroll { right: 20px; bottom: 28px; }
       .hero-foot   { flex-direction: column; gap: 20px; }
-      .hero-scroll { right: 24px; }
+
+      /* Other sections */
       .about-grid  { grid-template-columns: 1fr; gap: 40px; }
       .about-h2    { position: static; }
       .team-grid   { grid-template-columns: 1fr; }
       footer       { padding: 0 24px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-logo img  { height: 16px; }
+      .nav-logo .sep { font-size: 12px; }
+      .nav-logo      { gap: 8px; }
+      .nav-pill      { padding: 6px 14px; font-size: 10px; }
+      .hero-h1       { font-size: clamp(32px, 11vw, 52px); }
+      .hero-body     { font-size: 15px; }
     }
   </style>
 </head>
@@ -692,15 +717,15 @@
       <span class="sep">×</span>
       <img src="opta logo.png" alt="OPTA" />
     </div>
-    <a href="#footer" class="nav-pill">Know More</a>
+    <a href="https://www.sprypt.com" class="nav-pill">Learn More</a>
   </nav>
 
   <!-- 01 · HERO -->
   <section id="hero">
-    <p class="hero-tag fade-up">April 10 & 11, 2026 · Hilton Polaris · Columbus, Ohio</p>
+    <p class="hero-tag fade-up">April 10 & 11,</p>
     <h1 class="hero-h1 fade-up d1">
       You didn't train for years<br>
-      <em>to be buried in paperwork.</em>
+      <em>to be buried in paperwork</em>
     </h1>
     <div class="hero-rule fade-up d2"></div>
     <p class="hero-body fade-up d3">The Ohio Physical Therapy Association turns 75 this April. SPRY is proud to be part of the conversation about what comes next.</p>
@@ -713,7 +738,7 @@
   <!-- 02 · VIDEO -->
   <section id="video">
     <div class="inner">
-      <h2 class="video-lead fade-up d1">A film about where physical therapy has been and the question every clinician is sitting with right now: AI.</h2>
+      <h2 class="video-lead fade-up d1">A film about where physical therapy has been and the question every clinician is sitting with right now. AI?</h2>
       <div class="video-shell fade-up d2">
         <!-- ✏️  Replace VIDEO_ID with your actual YouTube video ID -->
         <iframe
@@ -735,12 +760,11 @@
         <span class="eyebrow">The Inflection Point</span>
       </div>
       <h2 class="moment-h2 fade-up d1">
-        Physical therapy<br>is at <em>a turning point.</em>
+        Physical therapy<br>is <em>transforming.</em>
       </h2>
       <div class="editorial fade-up d2">
         <p>For 75 years, Ohio's physical therapists built something that outlasted every shift in medicine, every policy battle, every change in how care gets delivered. Today, <strong>11,767 licensed physical therapists</strong> practice in Ohio, and the profession has never been more necessary.</p>
         <p>But most clinicians spend a significant part of their day on work they didn't train for. Documentation. Billing. Prior authorizations. The administrative burden has grown faster than the tools designed to carry it, and <strong>burnout is rising.</strong> Not because the work is wrong, but because the system around it is.</p>
-        <p>AI is arriving with promises. The ones worth paying attention to disappear into the background, handling the paperwork so clinicians <strong>never have to choose between the patient and the screen.</strong> That is the question OPTA's 75th anniversary is asking. And the only one worth answering well.</p>
       </div>
     </div>
   </section>
@@ -755,14 +779,13 @@
       <div class="about-grid">
         <div>
           <h2 class="about-h2 fade-up">
-            Built to get<br>
-            <em>out of the way.</em>
+            Built for the next<br>
+            <em>75 years of your practice.</em>
           </h2>
         </div>
         <div>
           <div class="body-copy fade-up d1">
             <p>SPRY is an <strong>AI-native platform built specifically for physical therapy, occupational therapy, and speech-language pathology clinics.</strong> Not adapted from a general medical system. Not retrofitted with AI features. Built from the ground up around a single idea: the best clinical technology is the kind that refuses to be noticed.</p>
-            <p>SPRY handles the documentation, the billing, the scheduling, the prior authorizations — everything that pulls a clinician away from the patient. The result is more time in the room, fewer hours behind the screen, and <strong>a practice that runs at the level the profession deserves.</strong></p>
             <p>500+ clinics. 35+ states. Rated 4.8/5 on G2 and Capterra.</p>
           </div>
           <a href="https://sprypt.com" target="_blank" rel="noopener" class="btn btn-outline btn-arrow fade-up d2">Know More</a>
@@ -779,7 +802,7 @@
         <span class="eyebrow">Find Us at OPTA</span>
       </div>
       <h2 class="team-h2 fade-up d1">Come say hello at OPTA.</h2>
-      <p class="team-intro fade-up d2">Our team will be at the OPTA Spring Conference on April 10 &amp; 11 at the Hilton Polaris, Columbus. Stop by the booth — or book a conversation ahead of time.</p>
+      <p class="team-intro fade-up d2">Our team will be at the OPTA Spring Conference on April 10 &amp; 11 at the Hilton Polaris, Columbus. Stop by the booth, or book a conversation ahead of time.</p>
       <div class="team-grid">
 
         <div class="card fade-up">
@@ -808,7 +831,7 @@
 
       </div>
       <div class="team-cta fade-up">
-        <a href="#footer" class="btn btn-outline btn-arrow">Book a Call</a>
+        <a href="https://www.sprypt.com/demo" target="_blank" rel="noopener" class="btn btn-outline btn-arrow">Book a Call</a>
       </div>
     </div>
   </section>
@@ -818,13 +841,12 @@
 
     <!-- CTA -->
     <div class="footer-cta">
-      <p class="closing-tag fade-up">April 10 &amp; 11, 2026 · Hilton Polaris · Columbus, Ohio</p>
+      <p class="closing-tag fade-up">April 10 &amp; 11, 2026</p>
       <h2 class="closing-h2 fade-up d1">
         Find us<br><em>at OPTA.</em>
       </h2>
-      <p class="closing-meta fade-up d2">OPTA Spring Conference · April 10–11, 2026</p>
-      <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-cream btn-arrow fade-up d3">Book a Call</a>
-      <p class="closing-url fade-up">www.SPRYatOPTA.ai</p>
+      <p class="closing-meta fade-up d2">The Ohio Physical Therapy Association turns 75 this April. SPRY is proud to be part of the conversation about what comes next.</p>
+      <a href="https://www.sprypt.com/demo" target="_blank" rel="noopener" class="btn btn-cream btn-arrow fade-up d3">Book a Call</a>
     </div>
 
     <hr class="footer-cta-divider">
@@ -873,8 +895,8 @@
         <div>
           <p class="fc-label">Connect</p>
           <ul class="fc-list">
-            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/sprypt/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/spry.pt?igsh=MW5tN2NyeWd5N3Np" target="_blank" rel="noopener">Instagram</a></li>
             <li><a href="https://sprypt.com" target="_blank" rel="noopener">sprypt.com</a></li>
           </ul>
         </div>
@@ -888,13 +910,7 @@
           </ul>
         </div>
 
-        <div>
-          <p class="fc-label">Contact</p>
-          <ul class="fc-list">
-            <li><a href="mailto:hello@sprypt.com">hello@sprypt.com</a></li>
-            <li><a href="https://calendly.com" target="_blank" rel="noopener">Book a Call</a></li>
-          </ul>
-        </div>
+        
 
         <div>
           <p class="fc-label">© 2026</p>
@@ -906,11 +922,7 @@
 
       </div>
 
-      <div class="footer-bottom">
-        <span>SPRYatOPTA.ai</span>
-        <span>Columbus, OH · April 2026</span>
-      </div>
-    </div>
+    
 
   </footer>
 
